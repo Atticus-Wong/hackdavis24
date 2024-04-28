@@ -1,10 +1,32 @@
-import { run } from "./backend/prompt.js"
+const priv_pol = document.getElementById('priv-pol');
 
-document.getElementById('GenerateButton').addEventListener("click", function() {
+const inputData = {
+  text: ''
+};
 
-  const priv_policy = document.getElementById("priv-pol").value;
-  const answer = run(priv_policy);
-
-  document.getElementById("priv-pol").textContent = answer;
+document.getElementById('generateButton').addEventListener("click", () => {
+  inputData.text = priv_pol.value;
+  sendToServer();
 });
 
+
+
+
+async function sendToServer() {
+  console.log('sending to server');
+  fetch('http://localhost:3000/generated-text', {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json'
+    },
+    body: JSON.stringify({ inputData })
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log(data.generatedText);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  })
+
+}
