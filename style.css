@@ -5,6 +5,7 @@
     --bg-green: rgb(102, 208, 246);
     --fg-blue: rgb(204, 243, 255);
     --fg-pink: rgb(247, 233, 233);
+    --text-gray: rgb(95, 100, 113);
 }
 
 html {
@@ -22,6 +23,10 @@ html, body {
     color: var(--fg-blue);
 }
 
+body {
+    height: 100%;
+}
+
 #generateButton {
     display: block;
     background-color: var(--bg-pink);
@@ -31,8 +36,8 @@ html, body {
     font-size: 1.1em;
     padding: 0.5rem;
     color: #fff;
-    border: 0.1em solid var(--fg-pink);
-    border-radius: 8px;
+    border: none;
+    border-radius: 4px;
     transition: 0.2s background-color;
 }
 
@@ -67,25 +72,44 @@ strong:after {
 }
 
 #mainbody {
-    margin: auto;
+    margin: auto auto 2em auto;
     width: 80%;
+    height: 100%;
 }
 
-#priv-pol {
+.split {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 1rem;
+    margin:auto;
+    width: 90% !important;
+}
+
+#priv-pol, #response {
+    color: var(--text-gray);
+    box-sizing: border-box;
+    margin: auto;
     width: 100%;
     height: 100%;
     font-size: 1em;
     display: block;
     padding: 0.5rem;
-    margin: auto;
     border-radius: 5px;
     background-color: rgb(205, 217, 245);
+}
+
+#priv-pol {
     border: 3px solid var(--fg-blue);
     resize: none;
 }
 
 #priv-pol:focus, #priv-pol:focus-visible {
     outline: none;
+}
+
+#response {
+    border: 3px solid var(--fg-pink);
+    font-size: 0.8em;
 }
 
 @keyframes fade-in {
