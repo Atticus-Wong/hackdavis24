@@ -29,17 +29,18 @@
     <h1 id="name">privy</h1>
         <div><!--blank--></div>
     </div>
-    <form id="slider">
-        <label for="slide_inner">0</label><input id="slide_inner" onchange="slide()" type="range" min="1" max="3" value="0" class="slider">
-      </form>
-        <!-- <div class="slidecontainer">
-            <label for="myRange" id="selector"></label>
-            <input type="range" min="1" max="3" value="2" class="slider" id="myRange">
-        </div> -->
-    <button id="generateButton">generate</button>
-    <div id="mainbody" class="split">
-        <textarea id="priv-pol" placeholder="enter privacy policy" cols="10"></textarea>
-        <div id="response">the output will go here</div>
+    <div id="mainbody">
+        <div>
+            <button id="generateButton">generate</button>
+            <form id="slider">
+                <label for="slide_inner" id="slide_label">0</label>
+                <input id="slide_inner" onchange="slide()" type="range" min="1" max="3" value="0" class="slider">
+            </form>
+        </div>
+        <div class="split">
+            <textarea id="priv-pol" placeholder="enter privacy policy" cols="10"></textarea>
+            <div id="response">the output will go here</div>
+        </div>
     </div>
 </body>
 </html> 

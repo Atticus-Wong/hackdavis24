@@ -1,11 +1,13 @@
 #mainbody {
     animation: fade-in 0.5s, set-down 0.5s;
+    width: 90% !important;
 }
 
 #name-holder {
     display: grid;
     grid-template-columns: auto min-content auto;
     animation: fade-in 0.5s;
+    margin-bottom: 2em;
 }
 
 #name {
@@ -14,4 +16,17 @@
     overflow: hidden;
     white-space: nowrap;
     animation: typing 0.5s steps(5, end);
+}
+
+#slide_label {
+    display: inline-block;
+    width: 20%;
+    text-align: right;
+    margin-top: 0;
+    vertical-align: middle;
+}
+
+#slide_inner {
+    margin-top: 0;
+    vertical-align: middle;
 }
