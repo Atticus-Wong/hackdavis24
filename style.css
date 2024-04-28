@@ -1,7 +1,9 @@
 :root {
-    --bg-blue: rgb(113, 169, 234);
-    --bg-green: rgb(102, 215, 246);
-    --text-blue: rgb(204, 243, 255);
+    --bg-blue: rgb(155, 184, 255);
+    --bg-pink: rgb(247, 190, 190);
+    --bg-green: rgb(102, 208, 246);
+    --fg-blue: rgb(204, 243, 255);
+    --fg-pink: rgb(247, 233, 233);
 }
 
 html {
@@ -18,18 +20,20 @@ html, body {
     font-weight: 400;
     font-style: normal;
     margin: auto;
-    color: var(--text-blue);
+    color: var(--fg-blue);
 }
 
 
 #generateButton {
     display: block;
+    background-color: var(--bg-pink);
     font-family: inherit;
     text-align: center;
     margin: 0.5rem auto;
     font-size: 1.1em;
     padding: 0.5rem;
-    border: 2px solid black;
+    color: #fff;
+    border: 2px solid var(--fg-pink);
     border-radius: 8px;
 }
 
@@ -52,10 +56,19 @@ h1 {
     margin: auto;
     border-radius: 5px;
     background-color: rgb(205, 217, 245);
-    border: 3px solid var(--text-blue);
+    border: 3px solid var(--fg-blue);
     resize: none;
 }
 
 #priv-pol:focus, #priv-pol:focus-visible {
     outline: none;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
