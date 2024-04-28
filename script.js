@@ -4,29 +4,29 @@ const inputData = {
   text: ''
 };
 
-document.getElementById('generateButton').addEventListener("click", () => {
+document.getElementById('generateButton').addEventListener("click", async() => {
   inputData.text = priv_pol.value;
-  sendToServer();
+  const output = await sendToServer();
+  document.getElementById('response').innerHTML = output.replaceAll("\n", "<br>");
 });
 
-
-
-
 async function sendToServer() {
-  console.log('sending to server');
-  fetch('http://localhost:3000/generated-text', {
+  try {
+    console.log('sending to server');
+    const response = await fetch('http://localhost:3000/generated-text', {
     method: 'POST',
     headers: {
       'Content-type': 'application/json'
     },
     body: JSON.stringify({ inputData })
   })
-  .then(response => response.json())
-  .then(data => {
-    console.log(data.generatedText);
-  })
-  .catch(error => {
+  const data = await response.json();
+  console.log(data.generatedText);
+  return data.generatedText;
+  }
+  catch (error) {
     console.error('Error:', error);
-  })
+  }
+  
 
 }
