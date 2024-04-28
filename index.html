@@ -12,7 +12,18 @@
 </head>
 <script src="script.js" defer></script>
 <body>
+
+
+
+
     <h1>privy</h1>
+    <form id="slider">
+        <label for="slide_inner">0</label><input id="slide_inner" onchange="slide()" type="range" min="1" max="3" value="0" class="slider">
+      </form>
+        <!-- <div class="slidecontainer">
+            <label for="myRange" id="selector"></label>
+            <input type="range" min="1" max="3" value="2" class="slider" id="myRange">
+        </div> -->
         <button id="generateButton">generate</button>
     <div id="mainbody" class="split">
         <textarea id="priv-pol" placeholder="enter privacy policy" cols="10"></textarea>
