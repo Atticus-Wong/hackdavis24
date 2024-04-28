@@ -1,0 +1,70 @@
+:root {
+    --bg-blue: rgb(113, 169, 234);
+    --bg-green: rgb(102, 215, 246);
+    --text-blue: rgb(204, 243, 255);
+}
+
+html {
+    height: 100%;
+    background-image: linear-gradient(176deg, var(--bg-blue), var(--bg-green));
+    background-color: var(--bg-blue);
+}
+
+
+
+html, body, button {
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    margin: auto;
+}
+
+button {
+    background-color: #04aaa7;
+    border: 2px solid #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+html, body {
+    color: var(--text-blue);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    width: 100%;
+}
+
+#mainbody {
+    margin: auto;
+    width: 80%;
+}
+
+#generateButton {
+    text-align: center;
+    display: block;
+    margin: auto;
+
+}
+
+#priv-pol {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0.5rem;
+    margin: auto;
+    border-radius: 5px;
+    background-color: rgb(205, 217, 245);
+    border: 3px solid var(--text-blue);
+    resize: none;
+}
+
+#priv-pol:focus, #priv-pol:focus-visible {
+    outline: none;
+}
