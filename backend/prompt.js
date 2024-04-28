@@ -20,7 +20,9 @@ async function run(input_from_user) {
   console.log(text);
 
   console.timeEnd("executionTime");
+
+  return text;
 }
 
-run();
+run("i don't know how this works");
 

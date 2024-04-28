@@ -1,10 +1,16 @@
-import { run } from "./backend/prompt.js"
+import { run } from "./backend/prompt.js";
 
-document.getElementById('GenerateButton').addEventListener("click", function() {
+const generateButton = document.getElementById('generateButton');
 
+generateButton.addEventListener("click", async function() {
+  console.log("Generating...");
   const priv_policy = document.getElementById("priv-pol").value;
-  const answer = run(priv_policy);
-
-  document.getElementById("priv-pol").textContent = answer;
+  
+  try {
+    const answer = await run(priv_policy);
+    document.getElementById("priv-pol").value = answer;
+    
+  } catch (error) {
+    console.error("Error:", error);
+  }
 });
-
