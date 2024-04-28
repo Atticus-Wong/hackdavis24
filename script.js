@@ -13,6 +13,7 @@ function slide() {
   document.getElementById("slider").querySelectorAll("label")[0].innerHTML = outputString;
   
 }
+slide()
 
 
 
