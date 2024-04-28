@@ -38,6 +38,7 @@ app.use(express.json());
 
 app.post('/generated-text', async(req, res) => {
   try {
+    
     console.log(req.body);
     const { inputData } = req.body;
     const generatedText = await run(inputData.text);

@@ -1,13 +1,15 @@
 const priv_pol = document.getElementById('priv-pol');
 
-document.getElementById('generateButton').addEventListener("click", () => {
-  inputData.text = priv_pol.textContent;
-  sendToServer();
-});
-
 const inputData = {
   text: ''
 };
+
+document.getElementById('generateButton').addEventListener("click", () => {
+  inputData.text = priv_pol.value;
+  sendToServer();
+});
+
+
 
 
 async function sendToServer() {
