@@ -8,18 +8,18 @@
 
 html {
     height: 100%;
-    background-image: linear-gradient(176deg, var(--bg-blue), var(--bg-green));
+    background: linear-gradient(176deg, var(--bg-blue), var(--bg-green)) no-repeat center center fixed;
     background-color: var(--bg-blue);
 }
 
 html, body {
     font-family: "Ubuntu Mono", monospace;
     font-weight: 400;
+    font-size: 1.25em;
     font-style: normal;
     margin: auto;
     color: var(--fg-blue);
 }
-
 
 #generateButton {
     display: block;
@@ -38,6 +38,18 @@ h1 {
     text-align: center;
     font-size: 2.5em;
     width: 100%;
+}
+
+.header-left {
+    margin-left: 10%;
+    text-align: left;
+    font-family: inherit;
+}
+
+strong {
+    font-weight: 600;
+    font-size: 3em;
+    text-decoration: 8px underline var(--fg-pink);
 }
 
 #mainbody {
