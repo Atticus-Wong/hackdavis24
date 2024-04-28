@@ -1,0 +1,109 @@
+#carousel-holder {
+    margin: 2rem 0;
+    overflow: hidden;
+    border-left: 5px solid var(--bg-pink);
+    border-right: 5px solid var(--bg-pink);
+}
+
+#carousel {
+    animation: carousel-slider 15s linear infinite;
+    right: 1130px;
+    display: flex;
+    position: relative;
+    font-family: inherit;
+}
+
+.carousel-item {
+    min-width: 200px;
+    width: 200vw;
+    margin: 3px;
+    padding: 0.5rem;
+    font-family: inherit;
+    background-color: var(--fg-pink);
+    color: var(--bg-pink);
+    border-radius: 5px;
+}
+
+.headline {
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.publisher {
+    font-weight: 400;
+    font-size: 0.7rem;
+}
+
+.left-align, .right-align {
+    width: 75%;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right;
+}
+
+#about-header {
+    display:grid;
+    grid-template-columns: auto 5% 35% auto;
+}
+
+#logo {
+    margin: auto;
+    display: block;
+    width: 75%;
+    position: relative;
+    animation: fade-in 0.5s ease-out, set-down 0.5s ease-out;
+}
+
+#strong-1::after, #strong-2::after {
+    width: 0%;
+}
+
+#strong-1::after {
+    animation: fade-in-underline 0.35s ease-out forwards;
+}
+
+#strong-2::after {
+    animation: fade-in-underline 0.35s ease-out 0.15s forwards;
+}
+
+@keyframes carousel-slider {
+    0% {
+        right: 1130px;
+    }
+
+    100% {
+        right: 0px;
+    }
+}
+
+@keyframes set-down {
+    0% {
+        bottom: 1rem;
+    }
+    100% {
+        bottom: 0rem;
+    }
+}
+
+@keyframes fade-in-underline {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@media screen
+and (max-width: 900px) {
+    #about-header {
+        display: block;
+    }    
+}

@@ -1,6 +1,7 @@
 :root {
     --bg-blue: rgb(155, 184, 255);
     --bg-pink: rgb(247, 190, 190);
+    --bg-pink-deep: rgb(249, 164, 190);
     --bg-green: rgb(102, 208, 246);
     --fg-blue: rgb(204, 243, 255);
     --fg-pink: rgb(247, 233, 233);
@@ -8,18 +9,18 @@
 
 html {
     height: 100%;
-    background-image: linear-gradient(176deg, var(--bg-blue), var(--bg-green));
+    background: linear-gradient(176deg, var(--bg-blue), var(--bg-green)) no-repeat center center fixed;
     background-color: var(--bg-blue);
 }
 
 html, body {
     font-family: "Ubuntu Mono", monospace;
     font-weight: 400;
+    font-size: 1.25em;
     font-style: normal;
     margin: auto;
     color: var(--fg-blue);
 }
-
 
 #generateButton {
     display: block;
@@ -30,14 +31,39 @@ html, body {
     font-size: 1.1em;
     padding: 0.5rem;
     color: #fff;
-    border: 2px solid var(--fg-pink);
+    border: 0.1em solid var(--fg-pink);
     border-radius: 8px;
+    transition: 0.2s background-color;
+}
+
+#generateButton:hover {
+    background-color: var(--bg-pink-deep);
 }
 
 h1 {
     text-align: center;
     font-size: 2.5em;
     width: 100%;
+}
+
+.header-left {
+    margin-left: 10%;
+    text-align: left;
+    font-family: inherit;
+}
+
+strong {
+    font-weight: 600;
+    font-size: 3em;
+    /* text-decoration: 8px underline var(--fg-pink); */
+}
+
+strong:after {
+    content: '';
+    display: block;
+    height: 0.75rem;
+    width: 100%;
+    background-color: var(--fg-pink);
 }
 
 #mainbody {
@@ -48,6 +74,7 @@ h1 {
 #priv-pol {
     width: 100%;
     height: 100%;
+    font-size: 1em;
     display: block;
     padding: 0.5rem;
     margin: auto;
@@ -67,5 +94,24 @@ h1 {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@media screen
+and (max-width: 1300px) {
+    strong {
+        font-size: 2.5em;
+    }
+}
+@media screen
+and (max-width: 1100px) {
+    strong {
+        font-size: 2em;
+    }
+}
+@media screen
+and (max-width: 900px) {
+    strong {
+        font-size: 1.1em;
     }
 }
