@@ -13,9 +13,10 @@
 <script src="script.js" defer></script>
 <body>
     <h1>privy</h1>
-    <div id="mainbody">
         <button id="generateButton">generate</button>
-        <textarea id="priv-pol" placeholder="enter privacy policy" oninput="this.style.height = ''; this.style.height = this.scrollHeight +'px'"></textarea>
+    <div id="mainbody" class="split">
+        <textarea id="priv-pol" placeholder="enter privacy policy" cols="10"></textarea>
+        <div id="response">the output will go here</div>
     </div>
 </body>
 </html> 
