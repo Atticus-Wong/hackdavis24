@@ -21,11 +21,14 @@ slide()
 const priv_pol = document.getElementById('priv-pol');
 
 const inputData = {
-  text: ''
+  text: '',
+  slider: 0
 };
 
 document.getElementById('generateButton').addEventListener("click", async() => {
+  document.getElementById('response').innerText = 'loading...';
   inputData.text = priv_pol.value;
+  inputData.slider = document.getElementById('slide_inner').value;
   const output = await sendToServer();
   document.getElementById('response').innerHTML = output.replaceAll("\n", "<br>");
 });
