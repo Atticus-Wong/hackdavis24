@@ -1,0 +1,17 @@
+#mainbody {
+    animation: fade-in 0.5s, set-down 0.5s;
+}
+
+#name-holder {
+    display: grid;
+    grid-template-columns: auto min-content auto;
+    animation: fade-in 0.5s;
+}
+
+#name {
+    width: min-content;
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 0.5s steps(5, end);
+}

@@ -83,15 +83,6 @@
     }
 }
 
-@keyframes set-down {
-    0% {
-        bottom: 1rem;
-    }
-    100% {
-        bottom: 0rem;
-    }
-}
-
 @keyframes fade-in-underline {
     0% {
         width: 0%;

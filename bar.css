@@ -1,0 +1,25 @@
+bar {
+    padding: 0.2rem 0.5rem 0.25rem 0.5rem;
+    display: block;
+}
+bar > div {
+    display: flex;
+    width: 100%;
+}
+bar > div > .home {
+    color: var(--fg-blue);
+    font-size: 0.7em;
+    margin: 0.3rem 1rem 0 0;
+    text-decoration: none;
+}
+bar > div > .sublink {
+    color: var(--fg-blue);
+    font-size: 0.6em;
+    margin: 0.4rem 0.6rem 0 0;
+    text-decoration: none;
+}
+
+.currentlink {
+    color: var(--fg-pink) !important;
+    text-decoration: underline 2px !important;
+}
